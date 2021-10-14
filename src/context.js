@@ -6,7 +6,6 @@ import reducer from './reducer';
 const initialState = {
   planets_names: [],
   active_planet: {},
-  isSidebarOpen: false,
 };
 
 const AppContext = React.createContext();
@@ -26,7 +25,7 @@ const AppProvider = ({ children }) => {
   const toggleSidebar = () => {};
   const displayPlanet = () => {};
   return (
-    <AppContext.Provider value={{ ...state, toggleSidebar, displayPlanet }}>
+    <AppContext.Provider value={{ ...state, displayPlanet }}>
       {children}
     </AppContext.Provider>
   );

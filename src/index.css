@@ -100,7 +100,7 @@ h3 {
   font-size: 12px;
   font-family: var(--ff-primary);
   line-height: 25px;
-  letter-spacing: 0.07rem;
+  letter-spacing: 0.1rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -135,32 +135,40 @@ p {
   max-width: 1170px;
 }
 .line {
-  opacity: 40%;
+  opacity: 20%;
   margin: 0 auto;
 }
 .Mercury {
   color: var(--clr-primary-light-blue-mercury);
+  background-color: var(--clr-primary-light-blue-mercury);
 }
 .Venus {
   color: var(--clr-primary-yellow-venus);
+  background-color: var(--clr-primary-yellow-venus);
 }
 .Earth {
   color: var(--clr-primary-magenta-earth);
+  background-color: var(--clr-primary-magenta-earth);
 }
 .Mars {
   color: var(--clr-primary-brick-mars);
+  background-color: var(--clr-primary-brick-mars);
 }
 .Jupiter {
   color: var(--clr-primary-red-jupiter);
+  background-color: var(--clr-primary-red-jupiter);
 }
 .Saturn {
   color: var(--clr-primary-brown-saturn);
+  background-color: var(--clr-primary-brown-saturn);
 }
 .Uranus {
   color: var(--clr-primary-green-uranus);
+  background-color: var(--clr-primary-green-uranus);
 }
 .Neptune {
   color: var(--clr-primary-blue-neptune);
+  background-color: var(--clr-primary-blue-neptune);
 }
 @media screen and (min-width: 900px) {
   .section-center {
@@ -172,7 +180,7 @@ p {
 }
 @media screen and (min-width: 575px) {
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 }
 /*
 =============== 
@@ -216,7 +224,9 @@ Navbar
 }
 @media screen and (min-width: 575px) {
   .nav-toggle,
-  .nav-toggle-unactive {
+  .nav-toggle-unactive,
+  .sidebar,
+  .show-sidebar {
     display: none;
   }
   .nav-links {
@@ -249,7 +259,7 @@ Navbar
     padding: 2rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
   .nav-header {
     justify-content: space-between;
   }
@@ -268,6 +278,7 @@ Navbar
     border-top: 4px solid transparent;
     padding-top: 1rem;
   }
+
   .Mercury:hover {
     border-top: 4px solid var(--clr-primary-light-blue-mercury);
   }
@@ -292,4 +303,56 @@ Navbar
   .Neptune:hover {
     border-top: 4px solid var(--clr-primary-blue-neptune);
   }
+}
+/*
+=============== 
+Sidebar
+===============
+*/
+.sidebar {
+  position: fixed;
+  width: 100vw;
+  background: var(--clr-primary-very-dark-grey);
+  transition: var(--transition);
+  transform: translate(-100%);
+  z-index: -1;
+}
+.show-sidebar {
+  background: var(--clr-primary-very-dark-grey);
+  transform: translate(0);
+  z-index: 999;
+}
+.sidebar-links {
+  padding: 1rem 1.5rem;
+}
+.sidebar-circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+.sidebar-dot-container {
+  display: flex;
+  align-items: center;
+}
+.sidebar-links-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0.7rem 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.sidebar-links-container:hover {
+  opacity: 70%;
+}
+.sidebar-icon {
+  font-size: 1.8rem;
+  opacity: 30%;
+}
+.sidebar-line {
+  opacity: 20%;
+  margin-top: 0.7rem;
 }

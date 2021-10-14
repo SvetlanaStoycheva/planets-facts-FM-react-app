@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useGlobalContext } from '../context';
 import { FaBars } from 'react-icons/fa';
+import { RiArrowDropRightLine } from 'react-icons/ri';
 
 const Navbar = () => {
   const {
     planets_names,
-    toggleSidebar,
+
     displayPlanet,
-    isSidebarOpen,
   } = useGlobalContext();
+  const [isSidebarOpen, setIsSidebarOpan] = useState(false);
+
+  const toggleSidebar = () => {
+    if (isSidebarOpen) {
+      setIsSidebarOpan(false);
+    } else {
+      setIsSidebarOpan(true);
+    }
+  };
 
   return (
     <>
@@ -18,7 +27,7 @@ const Navbar = () => {
           <button
             type='button'
             className={`${
-              isSidebarOpen ? 'nav-toggle-unactive' : 'nav-toggle'
+              isSidebarOpen ? 'nav-toggle-unactive nav-toggle' : 'nav-toggle'
             }`}
             onClick={toggleSidebar}
           >
@@ -46,13 +55,20 @@ const Navbar = () => {
         <div className='sidebar-links'>
           {planets_names.map((item, index) => {
             return (
-              <button
+              <div
+                className='sidebar-links-container'
                 key={index}
-                className={`sidebar-link ${item}`}
                 onClick={displayPlanet}
               >
-                {item}
-              </button>
+                <div className='sidebar-dot-container'>
+                  <span className={`sidebar-circle ${item}`}></span>
+                  <h3>{item}</h3>
+                </div>
+                <span className='sidebar-icon'>
+                  <RiArrowDropRightLine />
+                </span>
+                <hr className='sidebar-line' />
+              </div>
             );
           })}
         </div>
