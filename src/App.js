@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
+import MainInfo from './components/MainInfo';
+import Footer from './components/Footer';
 
 function App() {
-  return <h2>hello</h2>;
+  return (
+    <>
+      <Navbar />
+      <MainInfo />
+      <Footer />
+    </>
+  );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-[
+export const dataJson = [
   {
     "name": "Mercury",
     "overview": {
