@@ -178,6 +178,30 @@ p {
     padding: 1.2rem 1.5rem;
   }
 }
+.Mercury:hover {
+  border-top: 4px solid var(--clr-primary-light-blue-mercury);
+}
+.Venus:hover {
+  border-top: 4px solid var(--clr-primary-yellow-venus);
+}
+.Earth:hover {
+  border-top: 4px solid var(--clr-primary-magenta-earth);
+}
+.Mars:hover {
+  border-top: 4px solid var(--clr-primary-brick-mars);
+}
+.Jupiter:hover {
+  border-top: 4px solid var(--clr-primary-red-jupiter);
+}
+.Saturn:hover {
+  border-top: 4px solid var(--clr-primary-brown-saturn);
+}
+.Uranus:hover {
+  border-top: 4px solid var(--clr-primary-green-uranus);
+}
+.Neptune:hover {
+  border-top: 4px solid var(--clr-primary-blue-neptune);
+}
 @media screen and (min-width: 575px) {
 }
 @media screen and (min-width: 900px) {
@@ -231,6 +255,7 @@ Navbar
   }
   .nav-links {
     display: inline-block;
+    margin-bottom: 1rem;
   }
   .nav-link {
     color: var(--clr-primary-white);
@@ -238,7 +263,8 @@ Navbar
     border: transparent;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    font-size: 11px;
+    font-size: 10px;
+    font-weight: 700;
     font-family: var(--ff-primary);
     line-height: 25px;
     letter-spacing: 0.07rem;
@@ -278,30 +304,8 @@ Navbar
     border-top: 4px solid transparent;
     padding-top: 1rem;
   }
-
-  .Mercury:hover {
-    border-top: 4px solid var(--clr-primary-light-blue-mercury);
-  }
-  .Venus:hover {
-    border-top: 4px solid var(--clr-primary-yellow-venus);
-  }
-  .Earth:hover {
-    border-top: 4px solid var(--clr-primary-magenta-earth);
-  }
-  .Mars:hover {
-    border-top: 4px solid var(--clr-primary-brick-mars);
-  }
-  .Jupiter:hover {
-    border-top: 4px solid var(--clr-primary-red-jupiter);
-  }
-  .Saturn:hover {
-    border-top: 4px solid var(--clr-primary-brown-saturn);
-  }
-  .Uranus:hover {
-    border-top: 4px solid var(--clr-primary-green-uranus);
-  }
-  .Neptune:hover {
-    border-top: 4px solid var(--clr-primary-blue-neptune);
+  .nav-header {
+    padding: 1.5rem;
   }
 }
 /*
@@ -354,5 +358,116 @@ Sidebar
 }
 .sidebar-line {
   opacity: 20%;
-  margin-top: 0.7rem;
+  margin-top: 0.75rem;
+}
+
+/*
+=============== 
+Main Info
+===============
+*/
+.main-info {
+  display: grid;
+  justify-items: center;
+  padding: 2rem;
+}
+.planet-img {
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+.text-container {
+  text-align: center;
+}
+.text-container h1 {
+  font-size: 4rem;
+}
+.buttons-container {
+  display: none;
+}
+.buttons-container-small {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin-bottom: 3rem;
+}
+.text-btn-small {
+  background: transparent;
+  border: transparent;
+  color: var(--clr-primary-white);
+  opacity: 60%;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border-top: 4px solid transparent;
+  padding-top: 1rem;
+}
+.text-btn-small:hover {
+  opacity: 100%;
+}
+.source p {
+  opacity: 60%;
+}
+.source a {
+  color: var(--clr-primary-white);
+}
+
+@media screen and (min-width: 575px) {
+  .buttons-container-small {
+    display: none;
+  }
+  .buttons-container {
+    display: inline-block;
+  }
+  .planet-img {
+    margin-top: 3rem;
+  }
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 3rem;
+    align-items: center;
+  }
+  .text-container {
+    text-align: left;
+  }
+  .text-container h1 {
+    font-size: 3rem;
+  }
+  .text-container p {
+    font-size: 0.7rem;
+  }
+  .number-btn,
+  .text-btn {
+    background: transparent;
+    border: transparent;
+    color: var(--clr-primary-white);
+  }
+  .number-btn {
+    font-family: var(--ff-primary);
+    letter-spacing: 0.15rem;
+    opacity: 60%;
+    font-size: 0.6rem;
+    width: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .text-btn {
+    font-family: var(--ff-primary);
+    letter-spacing: 0.23rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+  .single-btn {
+    border: solid var(--clr-primary-grey) 1px;
+    margin-bottom: 1rem;
+    border-top: 1px solid var(--clr-primary-grey);
+  }
 }

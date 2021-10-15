@@ -4,11 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import { RiArrowDropRightLine } from 'react-icons/ri';
 
 const Navbar = () => {
-  const {
-    planets_names,
-
-    displayPlanet,
-  } = useGlobalContext();
+  const { planets_names, displayPlanet } = useGlobalContext();
   const [isSidebarOpen, setIsSidebarOpan] = useState(false);
 
   const toggleSidebar = () => {
@@ -40,15 +36,15 @@ const Navbar = () => {
               <button
                 key={index}
                 className={`nav-link ${item}`}
-                onClick={displayPlanet}
+                onClick={(e) => displayPlanet(e)}
               >
                 {item}
               </button>
             );
           })}
         </div>
-        <hr className='line' />
       </nav>
+      <hr className='line' />
       <aside
         className={`${isSidebarOpen ? 'sidebar, show-sidebar' : 'sidebar'}`}
       >
