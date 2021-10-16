@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { dataJson } from './utils/data';
 
 import reducer from './reducer';
@@ -33,6 +33,7 @@ const initialState = {
       geology: './assets/geology-earth.png',
     },
   },
+  active_button: 'overview',
 };
 
 const AppContext = React.createContext();
@@ -57,9 +58,35 @@ const AppProvider = ({ children }) => {
   const displayPlanet = (e) => {
     const activePlanet = e.target.textContent;
     dispatch({ type: 'SET_ACTIVE_PLANET', payload: activePlanet });
+    setIsSidebarOpan(false);
   };
+
+  const [isSidebarOpen, setIsSidebarOpan] = useState(false);
+  const toggleSidebar = () => {
+    if (isSidebarOpen) {
+      setIsSidebarOpan(false);
+    } else {
+      setIsSidebarOpan(true);
+    }
+  };
+
+  const setActiveButton = (e) => {
+    // console.log(e.target.dataset.lable);
+    // console.log(e.target);
+    const currentBtnLable = e.target.dataset.lable;
+    dispatch({ type: 'SET_ACTIVE_BTN', payload: currentBtnLable });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, displayPlanet }}>
+    <AppContext.Provider
+      value={{
+        ...state,
+        displayPlanet,
+        toggleSidebar,
+        isSidebarOpen,
+        setActiveButton,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

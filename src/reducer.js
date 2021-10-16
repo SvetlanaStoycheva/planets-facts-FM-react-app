@@ -10,7 +10,10 @@ const reducer = (state, action) => {
     const activePlanet = state.all_data_set.find(
       (item) => item.name === action.payload
     );
-    return { ...state, active_planet: activePlanet };
+    return { ...state, active_planet: activePlanet, active_button: 'overview' };
+  }
+  if (action.type === 'SET_ACTIVE_BTN') {
+    return { ...state, active_button: action.payload };
   }
   throw new Error(`no matching "${action.type}" action type`);
 };

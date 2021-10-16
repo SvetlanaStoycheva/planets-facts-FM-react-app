@@ -1,4 +1,5 @@
-import earthImg from './assets/geology-earth.png';
+import earthImg from './assets/geology-jupiter.png';
+// src/utils/assets/geology-jupiter.png
 
 export const dataJson = [
   {
