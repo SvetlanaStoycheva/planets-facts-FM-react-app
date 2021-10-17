@@ -1,7 +1,6 @@
 import React from 'react';
 import { CgArrowTopRightR } from 'react-icons/cg';
 import { useGlobalContext } from '../context';
-import planetEarth from '../utils/assets/planetEarth.svg';
 
 const MainInfo = () => {
   const { active_planet, setActiveButton, active_button } = useGlobalContext();
@@ -21,8 +20,6 @@ const MainInfo = () => {
       geology: geologyImg,
     } = images;
 
-    console.log(planetImg);
-
     const { content: overview, source: overviewSource } = overviewContent;
     const { content: geology, source: geologySource } = geologyContent;
     const { content: structure, source: structureSource } = structureContent;
@@ -31,9 +28,27 @@ const MainInfo = () => {
       <section className='main-info'>
         {/* small screen buttons */}
         <div className='buttons-container-small'>
-          <button className={`${name} text-btn-small`}>overview</button>
-          <button className={`${name} text-btn-small`}>structure</button>
-          <button className={`${name} text-btn-small`}>surface</button>
+          <button
+            className={`border-${name} text-btn-small`}
+            onClick={(e) => setActiveButton(e)}
+            data-lable='overview'
+          >
+            overview
+          </button>
+          <button
+            className={`border-${name} text-btn-small`}
+            onClick={(e) => setActiveButton(e)}
+            data-lable='structure'
+          >
+            structure
+          </button>
+          <button
+            className={`border-${name} text-btn-small`}
+            onClick={(e) => setActiveButton(e)}
+            data-lable='geology'
+          >
+            surface
+          </button>
         </div>
         <hr className='line line-main' />
         {/* big screen */}
@@ -50,6 +65,7 @@ const MainInfo = () => {
             alt=''
           />
         </div>
+        {/* text */}
         <div className='info-container'>
           <div className='text-container'>
             <h1>{name}</h1>
@@ -82,6 +98,7 @@ const MainInfo = () => {
               </p>
             </div>
           </div>
+          {/* buttons */}
           <div className='buttons-container'>
             <div
               className={`${
@@ -90,7 +107,6 @@ const MainInfo = () => {
                   : 'single-btn'
               }`}
             >
-              {/* <div className='single-btn'> */}
               <button className='number-btn'>01</button>
               <button
                 className='text-btn'

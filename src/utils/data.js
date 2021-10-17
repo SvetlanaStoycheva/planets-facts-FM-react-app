@@ -1,5 +1,27 @@
-import earthImg from './assets/geology-jupiter.png';
-// src/utils/assets/geology-jupiter.png
+import earth1 from './assets/planetEarth.svg';
+import earth2 from './assets/planet-earth-internal.svg';
+import earth3 from './assets/geology-earth.png';
+import mercury1 from './assets/planet-mercury.svg';
+import mercury2 from './assets/planet-mercury-internal.svg';
+import mercury3 from './assets/geology-mercury.png';
+import venus1 from './assets/planet-venus.svg';
+import venus2 from './assets/planet-venus-internal.svg';
+import venus3 from './assets/geology-venus.png';
+import mars1 from './assets/planet-mars.svg';
+import mars2 from './assets/planet-mars-internal.svg';
+import mars3 from './assets/geology-mars.png';
+import jupiter1 from './assets/planet-jupiter.svg';
+import jupiter2 from './assets/planet-jupiter-internal.svg';
+import jupiter3 from './assets/geology-jupiter.png';
+import saturn1 from './assets/planet-saturn.svg';
+import saturn2 from './assets/planet-saturn-internal.svg';
+import saturn3 from './assets/geology-saturn.png';
+import uranus1 from './assets/planet-uranus.svg';
+import uranus2 from './assets/planet-uranus-internal.svg';
+import uranus3 from './assets/geology-uranus.png';
+import neptune1 from './assets/planet-neptune.svg';
+import neptune2 from './assets/planet-neptune-internal.svg';
+import neptune3 from './assets/geology-neptune.png';
 
 export const dataJson = [
   {
@@ -25,9 +47,9 @@ export const dataJson = [
     radius: '2,439.7 KM',
     temperature: '430°c',
     images: {
-      planet: './assets/planet-mercury.svg',
-      internal: './assets/planet-mercury-internal.svg',
-      geology: './assets/geology-mercury.png',
+      planet: mercury1,
+      internal: mercury2,
+      geology: mercury3,
     },
   },
   {
@@ -52,9 +74,9 @@ export const dataJson = [
     radius: '6,051.8 KM',
     temperature: '471°c',
     images: {
-      planet: './assets/planet-venus.svg',
-      internal: './assets/planet-venus-internal.svg',
-      geology: './assets/geology-venus.png',
+      planet: venus1,
+      internal: venus2,
+      geology: venus3,
     },
   },
   {
@@ -79,9 +101,9 @@ export const dataJson = [
     radius: '6,371 KM',
     temperature: '16°c',
     images: {
-      planet: earthImg,
-      internal: './assets/planet-earth-internal.svg',
-      geology: './assets/geology-earth.png',
+      planet: earth1,
+      internal: earth2,
+      geology: earth3,
     },
   },
   {
@@ -106,9 +128,9 @@ export const dataJson = [
     radius: '3,389.5 KM',
     temperature: '-28°c',
     images: {
-      planet: './assets/planet-mars.svg',
-      internal: './assets/planet-mars-internal.svg',
-      geology: './assets/geology-mars.png',
+      planet: mars1,
+      internal: mars2,
+      geology: mars3,
     },
   },
   {
@@ -134,9 +156,9 @@ export const dataJson = [
     radius: '69,911 KM',
     temperature: '-108°c',
     images: {
-      planet: './assets/planet-jupiter.svg',
-      internal: './assets/planet-jupiter-internal.svg',
-      geology: './assets/geology-jupiter.png',
+      planet: jupiter1,
+      internal: jupiter2,
+      geology: jupiter3,
     },
   },
   {
@@ -161,9 +183,9 @@ export const dataJson = [
     radius: '58,232 KM',
     temperature: '-138°c',
     images: {
-      planet: './assets/planet-saturn.svg',
-      internal: './assets/planet-saturn-internal.svg',
-      geology: './assets/geology-saturn.png',
+      planet: saturn1,
+      internal: saturn2,
+      geology: saturn3,
     },
   },
   {
@@ -188,9 +210,9 @@ export const dataJson = [
     radius: '25,362 KM',
     temperature: '-195°c',
     images: {
-      planet: './assets/planet-uranus.svg',
-      internal: './assets/planet-uranus-internal.svg',
-      geology: './assets/geology-uranus.png',
+      planet: uranus1,
+      internal: uranus2,
+      geology: uranus3,
     },
   },
   {
@@ -215,9 +237,9 @@ export const dataJson = [
     radius: '24,622 KM',
     temperature: '-201°c',
     images: {
-      planet: './assets/planet-neptune.svg',
-      internal: './assets/planet-neptune-internal.svg',
-      geology: './assets/geology-neptune.png',
+      planet: neptune1,
+      internal: neptune2,
+      geology: neptune3,
     },
   },
 ];

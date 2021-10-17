@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useGlobalContext } from '../context';
 import { FaBars } from 'react-icons/fa';
 import { RiArrowDropRightLine } from 'react-icons/ri';
