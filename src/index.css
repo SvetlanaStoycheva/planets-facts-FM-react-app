@@ -53,7 +53,7 @@ Global Styles
 }
 body {
   background: var(--clr-primary-very-dark-grey);
-  background-image: url('./assets/background-stars.svg');
+  background-image: url('./utils/assets/background-stars.svg');
   color: var(--clr-primary-white);
   font: var(--ff-primary);
   transition: var(--transition);
@@ -65,7 +65,7 @@ body {
   width: 100%;
 }
 .main {
-  background: url('./assets/background-stars.svg');
+  /* background: url('./assets/background-stars.svg'); */
   display: grid;
   place-items: center;
   margin: 0 auto;
