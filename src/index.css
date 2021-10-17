@@ -17,6 +17,7 @@ Variables
   --clr-primary-very-dark-grey: hsl(240, 67%, 8%);
   --clr-primary-dark-grey: hsl(240, 17%, 26%);
   --clr-primary-grey: hsl(240, 6%, 54%);
+  --clr-primary-light-grey: hsl(240, 2%, 79%);
   --clr-primary-light-blue-mercury: hsl(194, 48%, 49%);
   --clr-primary-yellow-venus: hsl(33, 82%, 61%);
   --clr-primary-magenta-earth: hsl(263, 67%, 51%);
@@ -65,7 +66,6 @@ body {
   width: 100%;
 }
 .main {
-  /* background: url('./assets/background-stars.svg'); */
   display: grid;
   place-items: center;
   margin: 0 auto;
@@ -135,8 +135,16 @@ p {
   max-width: 1170px;
 }
 .line {
-  opacity: 20%;
-  margin: 0 auto;
+  display: block;
+  border-bottom: 1px solid var(--clr-primary-dark-grey);
+  /* width: 80vw; */
+  /* margin: 0 auto; */
+}
+.nav-line {
+  width: 100vw;
+}
+.main-line {
+  width: 100%;
 }
 .Mercury {
   color: var(--clr-primary-light-blue-mercury);
@@ -228,13 +236,13 @@ Navbar
   transition: var(--transition);
 }
 .nav-toggle:hover {
-  opacity: 50%;
+  color: var(--clr-primary-grey);
 }
 .nav-toggle-unactive {
-  opacity: 50%;
+  color: var(--clr-primary-grey);
 }
 .nav-toggle-unactive:hover {
-  opacity: 100%;
+  color: var(--clr-primary-white);
 }
 .nav-header {
   padding: 1.5rem;
@@ -258,7 +266,7 @@ Navbar
     margin-bottom: 1rem;
   }
   .nav-link {
-    color: var(--clr-primary-white);
+    color: var(--clr-primary-grey);
     background: transparent;
     border: transparent;
     margin-left: 0.5rem;
@@ -269,7 +277,6 @@ Navbar
     line-height: 25px;
     letter-spacing: 0.07rem;
     text-transform: uppercase;
-    opacity: 70%;
     transition: var(--transition);
     cursor: pointer;
 
@@ -277,7 +284,7 @@ Navbar
     padding-top: 1rem;
   }
   .nav-link:hover {
-    opacity: 100%;
+    color: var(--clr-primary-white);
   }
   .nav-container {
     display: grid;
@@ -286,6 +293,9 @@ Navbar
   .nav-header {
     justify-content: center;
     padding: 2rem;
+  }
+  .nav-line {
+    border-bottom: 1px solid var(--clr-primary-dark-grey);
   }
 }
 @media screen and (min-width: 900px) {
@@ -353,14 +363,14 @@ Sidebar
   transition: var(--transition);
 }
 .sidebar-links-container:hover {
-  opacity: 70%;
+  color: var(--clr-primary-grey);
 }
 .sidebar-icon {
   font-size: 1.8rem;
-  opacity: 30%;
+  color: var(--clr-primary-grey);
 }
 .sidebar-line {
-  opacity: 20%;
+  color: var(--clr-primary-grey);
   margin-top: 0.75rem;
 }
 
@@ -372,13 +382,15 @@ Main Info
 .main-info {
   display: grid;
   justify-items: center;
-  padding: 2rem;
+  padding: 2rem 0;
+  padding-top: 0;
 }
 .planet-img {
   width: 10rem;
   height: 10rem;
   object-fit: scale-down;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 .text-container {
   text-align: center;
@@ -393,13 +405,13 @@ Main Info
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .text-btn-small {
   background: transparent;
   border: transparent;
   color: var(--clr-primary-white);
-  opacity: 60%;
+  color: var(--clr-primary-grey);
   font-family: var(--ff-primary);
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -411,16 +423,22 @@ Main Info
   padding-top: 1rem;
 }
 .text-btn-small:hover {
-  opacity: 100%;
+  color: var(--clr-primary-white);
 }
 .source p {
-  opacity: 60%;
+  color: var(--clr-primary-light-grey);
 }
 .source a {
   color: var(--clr-primary-white);
 }
 
 @media screen and (min-width: 575px) {
+  .main-info {
+    padding: 2rem;
+  }
+  .main-line {
+    display: none;
+  }
   .buttons-container-small {
     display: none;
   }
@@ -457,7 +475,7 @@ Main Info
   .number-btn {
     font-family: var(--ff-primary);
     letter-spacing: 0.15rem;
-    opacity: 60%;
+    color: var(--clr-primary-grey);
     font-size: 0.6rem;
     width: 1.5rem;
     padding: 1rem 1.5rem;
@@ -520,7 +538,7 @@ Footer
 }
 .footer-single-value h4 {
   color: var(--clr-primary-white);
-  opacity: 60%;
+  color: var(--clr-primary-grey);
   letter-spacing: 0.06rem;
 }
 .footer-single-value h2 {
@@ -540,8 +558,8 @@ Footer
     margin-right: 0.3rem;
   }
   .footer-single-value h4 {
-    color: var(--clr-primary-white);
-    opacity: 60%;
+    color: var(--clr-primary-grey);
+
     letter-spacing: 0.06rem;
     font-size: 0.6rem;
   }

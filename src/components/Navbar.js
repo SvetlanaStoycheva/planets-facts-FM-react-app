@@ -40,7 +40,7 @@ const Navbar = () => {
           })}
         </div>
       </nav>
-      <hr className='line' />
+      <span className='line nav-line'></span>
       {/* sidebar */}
       <aside
         className={`${isSidebarOpen ? 'sidebar, show-sidebar' : 'sidebar'}`}
@@ -60,7 +60,7 @@ const Navbar = () => {
                 <span className='sidebar-icon'>
                   <RiArrowDropRightLine />
                 </span>
-                <hr className='sidebar-line' />
+                <span className='line sidebar-line'></span>
               </div>
             );
           })}

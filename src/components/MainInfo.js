@@ -50,7 +50,7 @@ const MainInfo = () => {
             surface
           </button>
         </div>
-        <hr className='line line-main' />
+        <span className='line main-line'></span>
         {/* big screen */}
         <div className='img-container'>
           <img
