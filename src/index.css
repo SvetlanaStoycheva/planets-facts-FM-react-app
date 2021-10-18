@@ -382,7 +382,7 @@ Main Info
 .main-info {
   display: grid;
   justify-items: center;
-  padding: 2rem 0;
+  padding: 2rem;
   padding-top: 0;
 }
 .planet-img {
